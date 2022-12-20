@@ -5,6 +5,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.viewmodel.CreationExtras;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -67,7 +68,12 @@ public class Proposal_mapActivity extends Fragment implements OnMapReadyCallback
                 @Override
                 public boolean onMarkerClick(@NonNull Marker marker) {
                     Toast.makeText(getContext(),"pos mine"+marker.getPosition(),Toast.LENGTH_SHORT).show();
-
+                    Intent intent=new Intent(getContext(),Project_ListActivity.class);
+                    LatLng latLng=marker.getPosition();
+                    intent.putExtra("lat",latLng.latitude);
+                    intent.putExtra("lng",latLng.longitude);
+                    intent.putExtra("type","proposal");
+                    startActivity(intent);
                     return false;
                 }
             });

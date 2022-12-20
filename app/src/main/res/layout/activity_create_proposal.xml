@@ -46,7 +46,7 @@
         app:layout_constraintTop_toBottomOf="@+id/loc" />
 
     <EditText
-        android:id="@+id/cost"
+        android:id="@+id/coxtt"
         android:layout_width="155dp"
         android:layout_height="0dp"
         android:layout_marginTop="18dp"
@@ -59,7 +59,7 @@
         app:layout_constraintTop_toBottomOf="@+id/lati" />
 
     <EditText
-        android:id="@+id/goal"
+        android:id="@+id/goall"
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:layout_marginTop="18dp"
@@ -68,8 +68,8 @@
         android:inputType="textPersonName"
         android:textColor="#605D5D"
         app:layout_constraintEnd_toEndOf="@+id/timespan"
-        app:layout_constraintStart_toStartOf="@+id/cost"
-        app:layout_constraintTop_toBottomOf="@+id/cost" />
+        app:layout_constraintStart_toStartOf="@+id/coxtt"
+        app:layout_constraintTop_toBottomOf="@+id/coxtt" />
 
     <EditText
         android:id="@+id/proj_id"
@@ -80,8 +80,8 @@
         android:hint="Project Id"
         android:inputType="textPersonName"
         android:textColor="#605D5D"
-        app:layout_constraintStart_toStartOf="@+id/goal"
-        app:layout_constraintTop_toBottomOf="@+id/goal" />
+        app:layout_constraintStart_toStartOf="@+id/goall"
+        app:layout_constraintTop_toBottomOf="@+id/goall" />
 
     <EditText
         android:id="@+id/comp_time"
@@ -97,7 +97,7 @@
         app:layout_constraintTop_toBottomOf="@+id/proj_id" />
 
     <EditText
-        android:id="@+id/exec"
+        android:id="@+id/execc"
         android:layout_width="157dp"
         android:layout_height="45dp"
         android:layout_marginStart="40dp"
@@ -120,7 +120,7 @@
         android:hint="Longitude"
         android:inputType="textPersonName"
         android:textColor="#605D5D"
-        app:layout_constraintEnd_toEndOf="@+id/exec"
+        app:layout_constraintEnd_toEndOf="@+id/execc"
         app:layout_constraintHorizontal_bias="0.951"
         app:layout_constraintStart_toEndOf="@+id/lati"
         app:layout_constraintTop_toTopOf="@+id/lati" />
@@ -147,7 +147,7 @@
         android:hint="Start Date"
         android:inputType="textPersonName"
         android:textColor="#605D5D"
-        app:layout_constraintEnd_toEndOf="@+id/goal"
+        app:layout_constraintEnd_toEndOf="@+id/goall"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/proj_id"
         app:layout_constraintTop_toTopOf="@+id/proj_id" />

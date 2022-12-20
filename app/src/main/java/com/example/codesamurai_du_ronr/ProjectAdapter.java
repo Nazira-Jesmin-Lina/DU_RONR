@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -20,12 +21,13 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ViewHold
     public ProjectAdapter(Context context, ArrayList<Project_name> list) {
         this.context = context;
         this.list = list;
+        System.out.println(list.size()+"hello");
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.activity_project_list,parent,false);
+        View view = LayoutInflater.from(context).inflate(R.layout.project_list_sample,parent,false);
         return new ViewHolder(view);
     }
 
@@ -37,6 +39,7 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ViewHold
             public void onClick(View view) {
                 Intent intent=new Intent(context,commentActivity.class);
                 intent.putExtra("name",list.get(position).getName());
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
                 context.startActivity(intent);
             }
         });
@@ -50,7 +53,7 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ViewHold
     public class ViewHolder extends RecyclerView.ViewHolder {
         ImageView img;
         TextView text;
-        ConstraintLayout c;
+        CardView c;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 

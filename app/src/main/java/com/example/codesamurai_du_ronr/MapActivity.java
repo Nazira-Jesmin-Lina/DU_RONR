@@ -70,6 +70,10 @@ public class MapActivity extends Fragment implements OnMapReadyCallback,GoogleMa
                 public boolean onMarkerClick(@NonNull Marker marker) {
                     Toast.makeText(getContext(),"pos mine"+marker.getPosition(),Toast.LENGTH_SHORT).show();
                     Intent intent=new Intent(getContext(),Project_ListActivity.class);
+                    LatLng latLng=marker.getPosition();
+                    intent.putExtra("lat",latLng.latitude);
+                    intent.putExtra("lng",latLng.longitude);
+                    intent.putExtra("type","project");
                     startActivity(intent);
 
                     return false;
