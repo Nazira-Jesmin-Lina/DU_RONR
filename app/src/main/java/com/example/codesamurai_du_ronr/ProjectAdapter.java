@@ -54,7 +54,7 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ViewHold
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            text = itemView.findViewById(R.id.projectName);
+            text = itemView.findViewById(R.id.project_name);
             c=itemView.findViewById(R.id.clrs);
         }
     }
