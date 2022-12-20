@@ -10,7 +10,7 @@
         android:id="@+id/btn_map"
         android:layout_width="161dp"
         android:layout_height="106dp"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="28dp"
         android:layout_marginTop="188dp"
         android:background="@drawable/ui_bg"
         android:text="Project Map"
@@ -148,14 +148,47 @@
         app:srcCompat="@drawable/prop_create" />
 
     <ImageView
-        android:id="@+id/imageView13"
-        android:layout_width="79dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="48dp"
+        android:id="@+id/imageView14"
+        android:layout_width="125dp"
+        android:layout_height="66dp"
+        android:layout_marginBottom="44dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_all_prop"
+        app:layout_constraintEnd_toEndOf="@+id/btn_all_prop"
+        app:layout_constraintHorizontal_bias="0.542"
+        app:layout_constraintStart_toStartOf="@+id/btn_all_prop"
+        app:srcCompat="@drawable/all" />
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="126dp"
+        android:layout_height="62dp"
+        android:layout_marginBottom="36dp"
         app:layout_constraintBottom_toBottomOf="@+id/btn_update_prop"
         app:layout_constraintEnd_toEndOf="@+id/btn_update_prop"
-        app:layout_constraintHorizontal_bias="0.439"
+        app:layout_constraintHorizontal_bias="0.542"
         app:layout_constraintStart_toStartOf="@+id/btn_update_prop"
-        app:srcCompat="@drawable/update" />
+        app:srcCompat="@drawable/uuuu" />
+
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="115dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="36dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_approve_prop"
+        app:layout_constraintEnd_toEndOf="@+id/btn_approve_prop"
+        app:layout_constraintHorizontal_bias="0.413"
+        app:layout_constraintStart_toStartOf="@+id/btn_approve_prop"
+        app:srcCompat="@drawable/approval" />
+
+    <ImageView
+        android:id="@+id/imageView17"
+        android:layout_width="95dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="36dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_create_user"
+        app:layout_constraintEnd_toEndOf="@+id/btn_create_user"
+        app:layout_constraintHorizontal_bias="0.518"
+        app:layout_constraintStart_toStartOf="@+id/btn_create_user"
+        app:srcCompat="@drawable/cre_user" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
