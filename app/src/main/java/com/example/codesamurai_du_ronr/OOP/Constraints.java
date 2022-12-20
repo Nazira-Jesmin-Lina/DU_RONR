@@ -1,35 +1,47 @@
 package com.example.codesamurai_du_ronr.OOP;
 
+import java.util.ArrayList;
+
 public class Constraints
 {
-    private Double lat,lang;
-    private int max_projects;
+    private String code,constraint_type;
+    private int max_limit;
 
     public Constraints() {
     }
 
-
-    public Double getLat() {
-        return lat;
+    public String getCode() {
+        return code;
     }
 
-    public void setLat(Double lat) {
-        this.lat = lat;
+    public void setCode(String code) {
+        this.code = code;
     }
 
-    public Double getLang() {
-        return lang;
+    public String getConstraint_type() {
+        return constraint_type;
     }
 
-    public void setLang(Double lang) {
-        this.lang = lang;
+    public void setConstraint_type(String constraint_type) {
+        this.constraint_type = constraint_type;
     }
 
-    public int getMax_projects() {
-        return max_projects;
+    public int getMax_limit() {
+        return max_limit;
     }
 
-    public void setMax_projects(int max_projects) {
-        this.max_projects = max_projects;
+    public void setMax_limit(int max_limit) {
+        this.max_limit = max_limit;
     }
+
+    public Constraints(ArrayList<String> data)
+    {
+        this.code=data.get(0);
+        this.max_limit=Integer.parseInt(data.get(1));
+        this.constraint_type=data.get(2);
+
+    }
+
+
+
 }

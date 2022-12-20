@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Projects {
     public String name,location,exec,project_id,goal,start_date;
-    public Double Latitude,Longitude,cost,timespan,completion,actual_cost;
+    public Double latitude,longitude,cost,timespan,completion,actual_cost;
 
     public Projects(){
 
@@ -12,8 +12,8 @@ public class Projects {
     public Projects(ArrayList<String> data){
         this.name=data.get(0);
         this.location=data.get(1);
-        this.Latitude=Double.parseDouble(data.get(2));
-        this.Longitude=Double.parseDouble(data.get(3));
+        this.latitude=Double.parseDouble(data.get(2));
+        this.longitude=Double.parseDouble(data.get(3));
         this.exec=data.get(4);
         this.cost=Double.parseDouble(data.get(5));
         this.timespan=Double.parseDouble(data.get(6));
@@ -73,21 +73,7 @@ public class Projects {
         this.start_date = start_date;
     }
 
-    public Double getLatitude() {
-        return Latitude;
-    }
 
-    public void setLatitude(Double latitude) {
-        Latitude = latitude;
-    }
-
-    public Double getLongitude() {
-        return Longitude;
-    }
-
-    public void setLongitude(Double longitude) {
-        Longitude = longitude;
-    }
 
     public Double getCost() {
         return cost;
@@ -119,5 +105,21 @@ public class Projects {
 
     public void setActual_cost(Double actual_cost) {
         this.actual_cost = actual_cost;
+    }
+
+    public Double getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(Double latitude) {
+        this.latitude = latitude;
+    }
+
+    public Double getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(Double longitude) {
+        this.longitude = longitude;
     }
 }

@@ -1,11 +1,26 @@
 package com.example.codesamurai_du_ronr.OOP;
 
+import java.util.ArrayList;
+
 public class Proposals {
     public String name,location,exec,project_id,goal,proposal_date;
-    public Double Latitude,Longitude,cost,timespan;
+    public Double latitude,longitude,cost,timespan;
 
     public Proposals() {
 
+    }
+    public Proposals(ArrayList<String> data)
+    {
+        this.name=data.get(0);
+        this.location=data.get(1);
+        this.latitude=Double.parseDouble(data.get(2));
+        this.longitude=Double.parseDouble(data.get(3));
+        this.exec=data.get(4);
+        this.cost=Double.parseDouble(data.get(5));
+        this.timespan=Double.parseDouble(data.get(6));
+        this.project_id=data.get(7);
+        this.goal=data.get(8);
+        this.proposal_date=data.get(9);
     }
 
 
@@ -57,21 +72,7 @@ public class Proposals {
         this.proposal_date = proposal_date;
     }
 
-    public Double getLatitude() {
-        return Latitude;
-    }
 
-    public void setLatitude(Double latitude) {
-        Latitude = latitude;
-    }
-
-    public Double getLongitude() {
-        return Longitude;
-    }
-
-    public void setLongitude(Double longitude) {
-        Longitude = longitude;
-    }
 
     public Double getCost() {
         return cost;
@@ -87,5 +88,21 @@ public class Proposals {
 
     public void setTimespan(Double timespan) {
         this.timespan = timespan;
+    }
+
+    public Double getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(Double latitude) {
+        this.latitude = latitude;
+    }
+
+    public Double getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(Double longitude) {
+        this.longitude = longitude;
     }
 }

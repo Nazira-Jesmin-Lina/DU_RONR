@@ -1,8 +1,17 @@
 package com.example.codesamurai_du_ronr.OOP;
 
+import java.util.ArrayList;
+
 public class Agencies {
     public Agencies() {
     }
+    public Agencies(ArrayList<String> data) {
+        this.code=data.get(0);
+        this.name=data.get(1);
+        this.type=data.get(2);
+        this.desc=data.get(3);
+    }
+
 
     public String getCode() {
         return code;

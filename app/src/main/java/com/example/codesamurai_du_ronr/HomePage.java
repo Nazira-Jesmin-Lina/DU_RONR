@@ -9,6 +9,17 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
+
+import com.example.codesamurai_du_ronr.OOP.Agencies;
+import com.example.codesamurai_du_ronr.OOP.Components;
+import com.example.codesamurai_du_ronr.OOP.Constraints;
+import com.example.codesamurai_du_ronr.OOP.Projects;
+import com.example.codesamurai_du_ronr.OOP.Proposals;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.ArrayList;
 
 public class HomePage extends AppCompatActivity {
     AppCompatButton map;
@@ -36,6 +47,82 @@ public class HomePage extends AppCompatActivity {
         up.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                FirebaseDatabase.getInstance().getReference().setValue(null);
+                Data data=new Data();
+                ArrayList<Projects> pp=data.get_projects(getApplicationContext());
+                for(Projects tmp: pp)
+                {
+                    FirebaseDatabase.getInstance().getReference().child("Projects").child(tmp.getProject_id()).push().setValue(tmp).addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void unused) {
+
+                        }
+                    });
+
+                }
+                ArrayList<Proposals> p1=data.get_proposals(getApplicationContext());
+                {
+                    for(Proposals tmp: p1)
+                    {
+                        FirebaseDatabase.getInstance().getReference().child("Proposals").child(tmp.getProject_id()).push().setValue(tmp).addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void unused) {
+
+                            }
+                        });
+
+                    }
+
+                }
+
+                ArrayList<Agencies> p2=data.get_agencies(getApplicationContext());
+                {
+                    for(Agencies tmp: p2)
+                    {
+                        FirebaseDatabase.getInstance().getReference().child("Agencies").child(tmp.code).push().setValue(tmp).addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void unused) {
+
+                            }
+                        });
+
+                    }
+
+                }
+
+                ArrayList<Constraints> p3=data.get_constraints(getApplicationContext());
+                {
+                    for(Constraints tmp: p3)
+                    {
+                        FirebaseDatabase.getInstance().getReference().child("Constraints").child(tmp.getCode()+tmp.getConstraint_type()).push().setValue(tmp).addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void unused) {
+
+                            }
+                        });
+
+                    }
+
+                }
+
+                ArrayList<Components> p4=data.get_components(getApplicationContext());
+                {
+                    for(Components tmp: p4)
+                    {
+                        FirebaseDatabase.getInstance().getReference().child("Components").child(tmp.getComponent_id()).push().setValue(tmp).addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void unused) {
+
+                            }
+                        });
+
+                    }
+
+                }
+
+
+
+
 
             }
         });
