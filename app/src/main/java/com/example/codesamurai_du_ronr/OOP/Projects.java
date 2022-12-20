@@ -1,10 +1,27 @@
 package com.example.codesamurai_du_ronr.OOP;
 
+import java.util.ArrayList;
+
 public class Projects {
     public String name,location,exec,project_id,goal,start_date;
     public Double Latitude,Longitude,cost,timespan,completion,actual_cost;
 
     public Projects(){
+
+    }
+    public Projects(ArrayList<String> data){
+        this.name=data.get(0);
+        this.location=data.get(1);
+        this.Latitude=Double.parseDouble(data.get(2));
+        this.Longitude=Double.parseDouble(data.get(3));
+        this.exec=data.get(4);
+        this.cost=Double.parseDouble(data.get(5));
+        this.timespan=Double.parseDouble(data.get(6));
+        this.project_id=data.get(7);
+        this.goal=data.get(8);
+        this.start_date=data.get(9);
+        this.completion=Double.parseDouble(data.get(10));
+        this.actual_cost=Double.parseDouble(data.get(11));
 
     }
 
