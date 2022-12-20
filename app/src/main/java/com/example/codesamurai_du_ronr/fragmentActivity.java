@@ -12,7 +12,18 @@ public class fragmentActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fragment);
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                new MapActivity()).commit();
+        Bundle b=getIntent().getExtras();
+        String s=b.getString("val");
+        if(s.equals("project"))
+        {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                    new MapActivity()).commit();
+        }
+        else
+        {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                    new Proposal_mapActivity()).commit();
+        }
+
     }
 }

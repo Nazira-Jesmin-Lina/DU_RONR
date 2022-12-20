@@ -8,6 +8,7 @@ import androidx.fragment.app.FragmentManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 public class HomePage extends AppCompatActivity {
     AppCompatButton map;
@@ -17,6 +18,7 @@ public class HomePage extends AppCompatActivity {
     AppCompatButton all_prop;
     AppCompatButton approve_prop;
     AppCompatButton create_user;
+    Button up;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,11 +31,20 @@ public class HomePage extends AppCompatActivity {
         all_prop=findViewById(R.id.btn_all_prop);
         approve_prop=findViewById(R.id.btn_approve_prop);
         create_user=findViewById(R.id.btn_create_user);
+        up=findViewById(R.id.dbms);
+
+        up.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
 
         map.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(HomePage.this,fragmentActivity.class);
+                intent.putExtra("val","project");
                 startActivity(intent);
             }
         });
@@ -41,7 +52,8 @@ public class HomePage extends AppCompatActivity {
         prop_map.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(HomePage.this,Proposal_mapActivity.class);
+                Intent intent=new Intent(HomePage.this,fragmentActivity.class);
+                intent.putExtra("val","prop");
                 startActivity(intent);
             }
         });
