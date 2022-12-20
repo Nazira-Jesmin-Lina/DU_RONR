@@ -13,9 +13,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CodeSamuraiDu_RONR"
         tools:targetApi="31">
+        <activity
+            android:name=".commentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Project_ListActivity"
+            android:exported="false" />
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyC47dppTKFvAVmUqyElObatkAlcBUQ7azE" />
+
         <activity
             android:name=".fragmentActivity"
             android:exported="false" />

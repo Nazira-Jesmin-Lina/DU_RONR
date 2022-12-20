@@ -2,6 +2,7 @@ package com.example.codesamurai_du_ronr;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
+import androidx.appcompat.widget.AppCompatImageButton;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
@@ -22,13 +23,13 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.ArrayList;
 
 public class HomePage extends AppCompatActivity {
-    AppCompatButton map;
-    AppCompatButton prop_map;
-    AppCompatButton create_prop;
-    AppCompatButton update_prop;
-    AppCompatButton all_prop;
-    AppCompatButton approve_prop;
-    AppCompatButton create_user;
+    AppCompatImageButton map;
+    AppCompatImageButton prop_map;
+    AppCompatImageButton create_prop;
+    AppCompatImageButton update_prop;
+    AppCompatImageButton all_prop;
+    AppCompatImageButton approve_prop;
+    AppCompatImageButton create_user;
     Button up;
 
     @Override

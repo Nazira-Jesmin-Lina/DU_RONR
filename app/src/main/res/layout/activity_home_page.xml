@@ -6,107 +6,146 @@
     android:layout_height="match_parent"
     tools:context=".HomePage">
 
-    <androidx.appcompat.widget.AppCompatButton
+    <androidx.appcompat.widget.AppCompatImageButton
         android:id="@+id/btn_map"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="132dp"
-        android:background="@drawable/button_background"
-        android:backgroundTint="#9D23E8"
+        android:layout_width="161dp"
+        android:layout_height="106dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="188dp"
+        android:background="@drawable/ui_bg"
         android:text="Project Map"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <androidx.appcompat.widget.AppCompatImageButton
         android:id="@+id/btn_Proposal_map"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
+        android:layout_width="161dp"
+        android:layout_height="106dp"
         android:layout_marginStart="32dp"
-        android:background="@drawable/button_background"
-        android:backgroundTint="#9D23E8"
+        android:background="@drawable/ui_bg"
         android:text="Proposal Map"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_map"
         app:layout_constraintStart_toEndOf="@+id/btn_map"
-        app:layout_constraintTop_toTopOf="@+id/btn_map"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="@+id/btn_map" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <androidx.appcompat.widget.AppCompatImageButton
         android:id="@+id/btn_prop_create"
-        android:layout_width="330dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/button_background"
-        android:backgroundTint="#9D23E8"
-        android:text="Update Proposal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="160dp"
+        android:layout_height="97dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/ui_bg"
+        android:text="Create Proposal"
+        app:layout_constraintEnd_toEndOf="@+id/btn_map"
+        app:layout_constraintStart_toStartOf="@+id/btn_map"
         app:layout_constraintTop_toBottomOf="@+id/btn_map" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <androidx.appcompat.widget.AppCompatImageButton
         android:id="@+id/btn_update_prop"
-        android:layout_width="330dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/button_background"
-        android:backgroundTint="#9D23E8"
-        android:text="Create Proposal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="161dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/ui_bg"
+        android:text="Update Proposal"
+        app:layout_constraintEnd_toEndOf="@+id/btn_Proposal_map"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btn_Proposal_map"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Proposal_map" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btn_all_prop"
+        android:layout_width="160dp"
+        android:layout_height="114dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/ui_bg"
+        android:text="All Proposal"
+        app:layout_constraintEnd_toEndOf="@+id/btn_prop_create"
+        app:layout_constraintStart_toStartOf="@+id/btn_prop_create"
         app:layout_constraintTop_toBottomOf="@+id/btn_prop_create" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_all_prop"
-        android:layout_width="330dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/button_background"
-        android:backgroundTint="#9D23E8"
-        android:text="All Proposal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btn_approve_prop"
+        android:layout_width="161dp"
+        android:layout_height="107dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/ui_bg"
+        android:text="Approve a Proposal"
+        app:layout_constraintEnd_toEndOf="@+id/btn_update_prop"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/btn_update_prop"
         app:layout_constraintTop_toBottomOf="@+id/btn_update_prop" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_approve_prop"
-        android:layout_width="330dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/button_background"
-        android:backgroundTint="#9D23E8"
-        android:text="Approve a Proposal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_all_prop" />
-
-    <androidx.appcompat.widget.AppCompatButton
+    <androidx.appcompat.widget.AppCompatImageButton
         android:id="@+id/btn_create_user"
-        android:layout_width="330dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/button_background"
-        android:backgroundTint="#9D23E8"
+        android:layout_width="149dp"
+        android:layout_height="112dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/ui_bg"
         android:text="Create User"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_approve_prop" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_all_prop" />
 
     <Button
         android:id="@+id/dbms"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="608dp"
         android:text="update"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.921"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="408dp"
+        android:layout_height="157dp"
+        android:layout_marginBottom="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_map"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="397dp"
+            android:layout_height="139dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/bck" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="94dp"
+        android:layout_height="71dp"
+        app:srcCompat="@drawable/google_maps"
+        tools:layout_editor_absoluteX="64dp"
+        tools:layout_editor_absoluteY="188dp" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="123dp"
+        android:layout_height="63dp"
+        app:srcCompat="@drawable/map_prop"
+        tools:layout_editor_absoluteX="248dp"
+        tools:layout_editor_absoluteY="189dp" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="108dp"
+        android:layout_height="65dp"
+        app:srcCompat="@drawable/prop_create"
+        tools:layout_editor_absoluteX="64dp"
+        tools:layout_editor_absoluteY="304dp" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="79dp"
+        android:layout_height="50dp"
+        app:srcCompat="@drawable/update"
+        tools:layout_editor_absoluteX="280dp"
+        tools:layout_editor_absoluteY="310dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

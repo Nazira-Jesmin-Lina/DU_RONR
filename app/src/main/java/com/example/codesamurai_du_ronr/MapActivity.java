@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.lifecycle.viewmodel.CreationExtras;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -68,6 +69,8 @@ public class MapActivity extends Fragment implements OnMapReadyCallback,GoogleMa
                 @Override
                 public boolean onMarkerClick(@NonNull Marker marker) {
                     Toast.makeText(getContext(),"pos mine"+marker.getPosition(),Toast.LENGTH_SHORT).show();
+                    Intent intent=new Intent(getContext(),Project_ListActivity.class);
+                    startActivity(intent);
 
                     return false;
                 }
