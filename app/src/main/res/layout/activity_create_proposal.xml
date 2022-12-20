@@ -6,4 +6,176 @@
     android:layout_height="match_parent"
     tools:context=".Create_proposalActivity">
 
+    <EditText
+        android:id="@+id/name_fld"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="60dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textColor="#605D5D"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/loc"
+        android:layout_width="155dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="18dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Location"
+        android:textColor="#605D5D"
+        app:layout_constraintStart_toStartOf="@+id/name_fld"
+        app:layout_constraintTop_toBottomOf="@+id/name_fld" />
+
+    <EditText
+        android:id="@+id/lati"
+        android:layout_width="155dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="18dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Latitude"
+        android:textColor="#605D5D"
+        app:layout_constraintEnd_toEndOf="@+id/loc"
+        app:layout_constraintStart_toStartOf="@+id/loc"
+        app:layout_constraintTop_toBottomOf="@+id/loc" />
+
+    <EditText
+        android:id="@+id/cost"
+        android:layout_width="155dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="18dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Cost"
+        android:textColor="#605D5D"
+        app:layout_constraintEnd_toEndOf="@+id/lati"
+        app:layout_constraintStart_toStartOf="@+id/lati"
+        app:layout_constraintTop_toBottomOf="@+id/lati" />
+
+    <EditText
+        android:id="@+id/goal"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="18dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Goal"
+        android:textColor="#605D5D"
+        app:layout_constraintEnd_toEndOf="@+id/timespan"
+        app:layout_constraintStart_toStartOf="@+id/cost"
+        app:layout_constraintTop_toBottomOf="@+id/cost" />
+
+    <EditText
+        android:id="@+id/proj_id"
+        android:layout_width="155dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="18dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Project Id"
+        android:textColor="#605D5D"
+        app:layout_constraintTop_toBottomOf="@+id/goal"
+        tools:layout_editor_absoluteX="31dp" />
+
+    <EditText
+        android:id="@+id/comp_time"
+        android:layout_width="156dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="18dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Completion time"
+        android:textColor="#605D5D"
+        app:layout_constraintEnd_toEndOf="@+id/proj_id"
+        app:layout_constraintStart_toStartOf="@+id/proj_id"
+        app:layout_constraintTop_toBottomOf="@+id/proj_id" />
+
+    <EditText
+        android:id="@+id/exec"
+        android:layout_width="157dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="58dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Exec"
+        android:textColor="#605D5D"
+        app:layout_constraintBottom_toBottomOf="@+id/loc"
+        app:layout_constraintEnd_toEndOf="@+id/name_fld"
+        app:layout_constraintStart_toEndOf="@+id/loc"
+        app:layout_constraintTop_toTopOf="@+id/name_fld"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/longi"
+        android:layout_width="155dp"
+        android:layout_height="0dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Longitude"
+        android:textColor="#605D5D"
+        app:layout_constraintEnd_toEndOf="@+id/exec"
+        app:layout_constraintHorizontal_bias="0.951"
+        app:layout_constraintStart_toEndOf="@+id/lati"
+        app:layout_constraintTop_toTopOf="@+id/lati" />
+
+    <EditText
+        android:id="@+id/timespan"
+        android:layout_width="155dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Timespan"
+        android:textColor="#605D5D"
+        app:layout_constraintEnd_toEndOf="@+id/longi"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/longi"
+        app:layout_constraintTop_toBottomOf="@+id/lati" />
+
+    <EditText
+        android:id="@+id/strt_date"
+        android:layout_width="155dp"
+        android:layout_height="46dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Start Date"
+        android:textColor="#605D5D"
+        app:layout_constraintEnd_toEndOf="@+id/goal"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/proj_id"
+        app:layout_constraintTop_toTopOf="@+id/proj_id" />
+
+    <EditText
+        android:id="@+id/act_cost"
+        android:layout_width="152dp"
+        android:layout_height="44dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Actual Cost"
+        android:textColor="#605D5D"
+        app:layout_constraintEnd_toEndOf="@+id/strt_date"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/comp_time"
+        app:layout_constraintTop_toTopOf="@+id/comp_time" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="192dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="76dp"
+        android:text="Create Proposal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.442"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/comp_time"
+        app:layout_constraintVertical_bias="0.0" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
