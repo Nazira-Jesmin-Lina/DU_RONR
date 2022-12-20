@@ -6,83 +6,279 @@
     android:layout_height="match_parent"
     tools:context=".HomePage">
 
-    <androidx.appcompat.widget.AppCompatImageButton
-        android:id="@+id/btn_map"
-        android:layout_width="161dp"
-        android:layout_height="106dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="188dp"
-        android:background="@drawable/ui_bg"
-        android:text="Project Map"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/agency"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="@+id/exec"
+        app:layout_constraintTop_toBottomOf="@+id/exec">
 
-    <androidx.appcompat.widget.AppCompatImageButton
-        android:id="@+id/btn_Proposal_map"
-        android:layout_width="161dp"
-        android:layout_height="106dp"
-        android:layout_marginStart="32dp"
-        android:background="@drawable/ui_bg"
-        android:text="Proposal Map"
-        app:layout_constraintStart_toEndOf="@+id/btn_map"
-        app:layout_constraintTop_toTopOf="@+id/btn_map" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/btn_all_prop"
+            android:layout_width="161dp"
+            android:layout_height="106dp"
+            android:layout_marginStart="6dp"
+            android:background="@drawable/ui_bg"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-    <androidx.appcompat.widget.AppCompatImageButton
-        android:id="@+id/btn_prop_create"
-        android:layout_width="160dp"
-        android:layout_height="97dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/ui_bg"
-        android:text="Create Proposal"
-        app:layout_constraintEnd_toEndOf="@+id/btn_map"
-        app:layout_constraintStart_toStartOf="@+id/btn_map"
-        app:layout_constraintTop_toBottomOf="@+id/btn_map" />
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="60dp"
+                android:layout_height="62dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/all" />
 
-    <androidx.appcompat.widget.AppCompatImageButton
-        android:id="@+id/btn_update_prop"
-        android:layout_width="161dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/ui_bg"
-        android:text="Update Proposal"
-        app:layout_constraintEnd_toEndOf="@+id/btn_Proposal_map"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/btn_Proposal_map"
-        app:layout_constraintTop_toBottomOf="@+id/btn_Proposal_map" />
+            <TextView
+                android:id="@+id/txt_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="All Proposal"
+                android:textColor="#FAF1F1"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/imageView3"
+                app:layout_constraintStart_toStartOf="@+id/imageView3" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.appcompat.widget.AppCompatImageButton
-        android:id="@+id/btn_all_prop"
-        android:layout_width="160dp"
-        android:layout_height="114dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/ui_bg"
-        android:text="All Proposal"
-        app:layout_constraintEnd_toEndOf="@+id/btn_prop_create"
-        app:layout_constraintStart_toStartOf="@+id/btn_prop_create"
-        app:layout_constraintTop_toBottomOf="@+id/btn_prop_create" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/btn_approve_prop"
+            android:layout_width="161dp"
+            android:layout_height="106dp"
+            android:layout_marginStart="28dp"
+            android:background="@drawable/ui_bg"
+            app:layout_constraintStart_toEndOf="@+id/btn_all_prop"
+            app:layout_constraintTop_toTopOf="@+id/btn_all_prop">
 
-    <androidx.appcompat.widget.AppCompatImageButton
-        android:id="@+id/btn_approve_prop"
-        android:layout_width="161dp"
-        android:layout_height="107dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/ui_bg"
-        android:text="Approve a Proposal"
-        app:layout_constraintEnd_toEndOf="@+id/btn_update_prop"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/btn_update_prop"
-        app:layout_constraintTop_toBottomOf="@+id/btn_update_prop" />
+            <ImageView
+                android:id="@+id/image_approve"
+                android:layout_width="115dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/approval" />
 
-    <androidx.appcompat.widget.AppCompatImageButton
-        android:id="@+id/btn_create_user"
-        android:layout_width="149dp"
-        android:layout_height="112dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/ui_bg"
-        android:text="Create User"
+            <TextView
+                android:id="@+id/txt_approve"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                android:text="Approve a Proposal"
+                android:textColor="#F6F2F2"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/image_approve"
+                app:layout_constraintStart_toStartOf="@+id/image_approve" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/exec"
+        android:layout_width="382dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="16dp"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="@+id/app"
+        app:layout_constraintTop_toBottomOf="@+id/app">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/btn_update_prop"
+            android:layout_width="161dp"
+            android:layout_height="106dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/ui_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageView
+                android:id="@+id/image_up"
+                android:layout_width="126dp"
+                android:layout_height="62dp"
+                android:layout_marginTop="13dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/uuuu" />
+
+            <TextView
+                android:id="@+id/txt_prop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="Update Proposal"
+                android:textColor="#F4EDED"
+                android:textSize="16sp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/image_up"
+                app:layout_constraintStart_toStartOf="@+id/image_up" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/btn_prop_create"
+            android:layout_width="161dp"
+            android:layout_height="106dp"
+            android:background="@drawable/ui_bg"
+            android:visibility="visible"
+            app:layout_constraintEnd_toStartOf="@+id/btn_update_prop"
+            app:layout_constraintHorizontal_bias="0.166"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/txt_crt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="9dp"
+                android:text="Create Proposal"
+                android:textColor="#EFE7E7"
+                android:textSize="16sp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/image_crt" />
+
+            <ImageView
+                android:id="@+id/image_crt"
+                android:layout_width="108dp"
+                android:layout_height="65dp"
+                android:layout_marginTop="10dp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/prop_create" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/app"
+        android:layout_width="382dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_all_prop" />
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/btn_proposal_map"
+            android:layout_width="161dp"
+            android:layout_height="106dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/ui_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btn_map">
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="17dp"
+                android:text="Project_proposal"
+                android:textColor="#FBF9F9"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/imageView11"
+                app:layout_constraintStart_toStartOf="@+id/imageView11" />
+
+            <ImageView
+                android:id="@+id/imageView11"
+                android:layout_width="123dp"
+                android:layout_height="63dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/map_prop" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/btn_map"
+            android:layout_width="161dp"
+            android:layout_height="106dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/ui_bg"
+            android:visibility="visible"
+            app:layout_constraintEnd_toStartOf="@+id/btn_proposal_map"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="94dp"
+                android:layout_height="71dp"
+                android:layout_marginBottom="3dp"
+                app:layout_constraintBottom_toTopOf="@+id/textView13"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/google_maps" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="103dp"
+                android:layout_height="32dp"
+                android:gravity="center"
+                android:text="Project Map"
+                android:textColor="#F4EFEF"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/imageView10"
+                app:layout_constraintStart_toStartOf="@+id/imageView10" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/btn_create_user"
+        android:layout_width="161dp"
+        android:layout_height="106dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/ui_bg"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/agency">
+
+        <TextView
+            android:id="@+id/txt_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="17dp"
+            android:text="Create User"
+            android:textColor="#FBF4F4"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+            app:layout_constraintStart_toStartOf="@+id/imageView4" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="67dp"
+            android:layout_height="67dp"
+            android:layout_marginStart="46dp"
+            android:layout_marginEnd="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/cre_user" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
         android:id="@+id/dbms"
@@ -96,13 +292,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
         android:layout_width="408dp"
         android:layout_height="157dp"
-        android:layout_marginBottom="25dp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_map"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/imageView8"
@@ -115,80 +311,5 @@
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/bck" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <ImageView
-        android:id="@+id/imageView10"
-        android:layout_width="94dp"
-        android:layout_height="71dp"
-        android:layout_marginBottom="32dp"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_map"
-        app:layout_constraintEnd_toEndOf="@+id/btn_map"
-        app:layout_constraintHorizontal_bias="0.402"
-        app:layout_constraintStart_toStartOf="@+id/btn_map"
-        app:srcCompat="@drawable/google_maps" />
-
-    <ImageView
-        android:id="@+id/imageView11"
-        android:layout_width="123dp"
-        android:layout_height="63dp"
-        android:layout_marginBottom="42dp"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_Proposal_map"
-        app:layout_constraintEnd_toEndOf="@+id/btn_Proposal_map"
-        app:layout_constraintStart_toStartOf="@+id/btn_Proposal_map"
-        app:srcCompat="@drawable/map_prop" />
-
-    <ImageView
-        android:id="@+id/imageView12"
-        android:layout_width="108dp"
-        android:layout_height="65dp"
-        android:layout_marginBottom="32dp"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_prop_create"
-        app:layout_constraintEnd_toEndOf="@+id/btn_prop_create"
-        app:layout_constraintStart_toStartOf="@+id/btn_prop_create"
-        app:srcCompat="@drawable/prop_create" />
-
-    <ImageView
-        android:id="@+id/imageView14"
-        android:layout_width="125dp"
-        android:layout_height="66dp"
-        android:layout_marginBottom="44dp"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_all_prop"
-        app:layout_constraintEnd_toEndOf="@+id/btn_all_prop"
-        app:layout_constraintHorizontal_bias="0.542"
-        app:layout_constraintStart_toStartOf="@+id/btn_all_prop"
-        app:srcCompat="@drawable/all" />
-
-    <ImageView
-        android:id="@+id/imageView15"
-        android:layout_width="126dp"
-        android:layout_height="62dp"
-        android:layout_marginBottom="36dp"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_update_prop"
-        app:layout_constraintEnd_toEndOf="@+id/btn_update_prop"
-        app:layout_constraintHorizontal_bias="0.542"
-        app:layout_constraintStart_toStartOf="@+id/btn_update_prop"
-        app:srcCompat="@drawable/uuuu" />
-
-    <ImageView
-        android:id="@+id/imageView16"
-        android:layout_width="115dp"
-        android:layout_height="70dp"
-        android:layout_marginBottom="36dp"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_approve_prop"
-        app:layout_constraintEnd_toEndOf="@+id/btn_approve_prop"
-        app:layout_constraintHorizontal_bias="0.413"
-        app:layout_constraintStart_toStartOf="@+id/btn_approve_prop"
-        app:srcCompat="@drawable/approval" />
-
-    <ImageView
-        android:id="@+id/imageView17"
-        android:layout_width="95dp"
-        android:layout_height="70dp"
-        android:layout_marginBottom="36dp"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_create_user"
-        app:layout_constraintEnd_toEndOf="@+id/btn_create_user"
-        app:layout_constraintHorizontal_bias="0.518"
-        app:layout_constraintStart_toStartOf="@+id/btn_create_user"
-        app:srcCompat="@drawable/cre_user" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

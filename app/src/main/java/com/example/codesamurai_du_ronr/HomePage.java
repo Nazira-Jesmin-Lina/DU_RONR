@@ -3,6 +3,7 @@ package com.example.codesamurai_du_ronr;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatImageButton;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
@@ -23,13 +24,13 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.ArrayList;
 
 public class HomePage extends AppCompatActivity {
-    AppCompatImageButton map;
-    AppCompatImageButton prop_map;
-    AppCompatImageButton create_prop;
-    AppCompatImageButton update_prop;
-    AppCompatImageButton all_prop;
-    AppCompatImageButton approve_prop;
-    AppCompatImageButton create_user;
+    ConstraintLayout map;
+    ConstraintLayout prop_map;
+    ConstraintLayout create_prop;
+    ConstraintLayout update_prop;
+    ConstraintLayout all_prop;
+    ConstraintLayout approve_prop;
+    ConstraintLayout create_user;
     Button up;
 
     @Override
@@ -37,7 +38,7 @@ public class HomePage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
         map=findViewById(R.id.btn_map);
-        prop_map=findViewById(R.id.btn_Proposal_map);
+        prop_map=findViewById(R.id.btn_proposal_map);
         create_prop=findViewById(R.id.btn_prop_create);
         update_prop=findViewById(R.id.btn_update_prop);
         all_prop=findViewById(R.id.btn_all_prop);
