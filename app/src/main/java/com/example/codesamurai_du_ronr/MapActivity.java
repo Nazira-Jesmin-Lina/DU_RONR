@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.example.codesamurai_du_ronr.OOP.Cord;
+import com.example.codesamurai_du_ronr.OOP.Projects;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -20,8 +21,13 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class MapActivity extends Fragment implements OnMapReadyCallback,GoogleMap.OnMarkerClickListener {
 
@@ -39,13 +45,24 @@ public class MapActivity extends Fragment implements OnMapReadyCallback,GoogleMa
         @Override
         public void onMapReady(GoogleMap googleMap) {
             GoogleMap mMap = googleMap;
-            Data data= new Data();
-            ArrayList<Cord> cords=data.read_project(getContext());
-            for(Cord x: cords){
-                LatLng p=new LatLng(x.lat,x.lang);
-                googleMap.addMarker(new MarkerOptions().position(p).title(x.loc));
-                googleMap.moveCamera(CameraUpdateFactory.newLatLng(p));
-            }
+            //database
+            FirebaseDatabase.getInstance().getReference().child("Projects").addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    for(DataSnapshot dataSnapshot : snapshot.getChildren())
+                    {
+                        Projects projects=dataSnapshot.getValue(Projects.class);
+                        LatLng p=new LatLng(projects.latitude,projects.longitude);
+                        googleMap.addMarker(new MarkerOptions().position(p).title(projects.getLocation()));
+                        googleMap.moveCamera(CameraUpdateFactory.newLatLng(p));
+                    }
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+            });
 
             mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
                 @Override
