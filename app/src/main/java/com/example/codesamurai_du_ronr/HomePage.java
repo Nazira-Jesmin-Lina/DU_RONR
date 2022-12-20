@@ -31,14 +31,59 @@ public class HomePage extends AppCompatActivity {
         map.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(HomePage.this,MapActivity.class);
+                Intent intent=new Intent(HomePage.this,fragmentActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        prop_map.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(HomePage.this,Proposal_mapActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        create_prop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(HomePage.this,Create_proposalActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        update_prop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(HomePage.this,Update_proposalActivity.class);
                 startActivity(intent);
             }
         });
 
 
+        all_prop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(HomePage.this,All_proposalActivity.class);
+                startActivity(intent);
+            }
+        });
 
+        approve_prop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(HomePage.this,Approve_proposalActivity.class);
+                startActivity(intent);
+            }
+        });
 
+        create_user.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(HomePage.this,Create_userActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
 

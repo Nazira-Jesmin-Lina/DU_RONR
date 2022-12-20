@@ -14,6 +14,9 @@
         android:theme="@style/Theme.CodeSamuraiDu_RONR"
         tools:targetApi="31">
         <activity
+            android:name=".fragmentActivity"
+            android:exported="false" />
+        <activity
             android:name=".Create_userActivity"
             android:exported="false" />
         <activity
@@ -27,9 +30,6 @@
             android:exported="false" />
         <activity
             android:name=".Update_proposalActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Proposal_MapActivity"
             android:exported="false" />
         <activity
             android:name=".HomePage"
