@@ -40,7 +40,7 @@ public class MapActivity extends Fragment implements OnMapReadyCallback,GoogleMa
         public void onMapReady(GoogleMap googleMap) {
             GoogleMap mMap = googleMap;
             Data data= new Data();
-            ArrayList<Cord> cords=data.read(getContext());
+            ArrayList<Cord> cords=data.read_project(getContext());
             for(Cord x: cords){
                 LatLng p=new LatLng(x.lat,x.lang);
                 googleMap.addMarker(new MarkerOptions().position(p).title(x.loc));
