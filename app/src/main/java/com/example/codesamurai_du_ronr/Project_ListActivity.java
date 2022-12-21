@@ -29,6 +29,7 @@ public class Project_ListActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_project_list);
+        getSupportActionBar().hide();
 
         recyclerView = findViewById(R.id.recyclerview);
         list = new ArrayList<>();

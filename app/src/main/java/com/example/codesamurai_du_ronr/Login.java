@@ -28,7 +28,7 @@ public class Login extends AppCompatActivity {
         signup=findViewById(R.id.sign_up_click);
         email=findViewById(R.id.email);
         password=findViewById(R.id.password);
-
+        getSupportActionBar().hide();
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

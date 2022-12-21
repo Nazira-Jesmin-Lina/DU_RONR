@@ -10,5 +10,6 @@ public class Update_proposalActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_proposal);
+        getSupportActionBar().hide();
     }
 }

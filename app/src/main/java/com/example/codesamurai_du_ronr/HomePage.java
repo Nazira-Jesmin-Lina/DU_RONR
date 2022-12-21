@@ -37,6 +37,7 @@ public class HomePage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
+        getSupportActionBar().hide();
         map=findViewById(R.id.btn_map);
         prop_map=findViewById(R.id.btn_proposal_map);
         create_prop=findViewById(R.id.btn_prop_create);

@@ -6,4 +6,49 @@
     android:layout_height="match_parent"
     tools:context=".Create_userActivity">
 
+    <EditText
+        android:id="@+id/email_fld"
+        android:layout_width="356dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="52dp"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.418"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+    <AutoCompleteTextView
+        android:id="@+id/role"
+        android:layout_width="352dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="40dp"
+        android:hint="Select Role"
+        app:layout_constraintEnd_toEndOf="@+id/email_fld"
+        app:layout_constraintStart_toStartOf="@+id/email_fld"
+        app:layout_constraintTop_toBottomOf="@+id/email_fld" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button2"
+        android:layout_width="192dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/ui_bg"
+        android:text="Create"
+        app:layout_constraintEnd_toEndOf="@+id/role"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/role"
+        app:layout_constraintTop_toBottomOf="@+id/role" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/forbidden" />
 </androidx.constraintlayout.widget.ConstraintLayout>

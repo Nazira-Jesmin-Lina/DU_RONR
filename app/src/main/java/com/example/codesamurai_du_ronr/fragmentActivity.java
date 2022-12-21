@@ -12,6 +12,7 @@ public class fragmentActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fragment);
+        getSupportActionBar().hide();
         Bundle b=getIntent().getExtras();
         String s=b.getString("val");
         if(s.equals("project"))
