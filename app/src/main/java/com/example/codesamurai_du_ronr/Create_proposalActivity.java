@@ -11,5 +11,7 @@ public class Create_proposalActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_proposal);
         getSupportActionBar().hide();
+
+
     }
 }
