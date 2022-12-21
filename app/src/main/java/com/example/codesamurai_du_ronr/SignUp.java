@@ -62,10 +62,14 @@ public class SignUp extends AppCompatActivity {
                                                 .setValue(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                                             @Override
                                             public void onSuccess(Void unused) {
+                                                Toast.makeText(getApplicationContext(),"Account Created",Toast.LENGTH_SHORT).show();
 
                                             }
                                         });
-                               Toast.makeText(getApplicationContext(),"Account Created",Toast.LENGTH_SHORT).show();
+                            }
+                            else
+                            {
+                                System.out.println("error" + task.getException().getMessage());
                             }
                         }
                     });
