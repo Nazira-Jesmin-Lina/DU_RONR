@@ -84,19 +84,6 @@
         app:layout_constraintTop_toBottomOf="@+id/goall" />
 
     <EditText
-        android:id="@+id/comp_time"
-        android:layout_width="156dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="18dp"
-        android:ems="10"
-        android:hint="Completion time"
-        android:inputType="textPersonName"
-        android:textColor="#605D5D"
-        app:layout_constraintEnd_toEndOf="@+id/proj_id"
-        app:layout_constraintStart_toStartOf="@+id/proj_id"
-        app:layout_constraintTop_toBottomOf="@+id/proj_id" />
-
-    <EditText
         android:id="@+id/execc"
         android:layout_width="157dp"
         android:layout_height="45dp"
@@ -140,11 +127,11 @@
         app:layout_constraintTop_toBottomOf="@+id/lati" />
 
     <EditText
-        android:id="@+id/strt_date"
+        android:id="@+id/prop_date"
         android:layout_width="155dp"
         android:layout_height="46dp"
         android:ems="10"
-        android:hint="Start Date"
+        android:hint="Proposal date"
         android:inputType="textPersonName"
         android:textColor="#605D5D"
         app:layout_constraintEnd_toEndOf="@+id/goall"
@@ -152,32 +139,19 @@
         app:layout_constraintStart_toEndOf="@+id/proj_id"
         app:layout_constraintTop_toTopOf="@+id/proj_id" />
 
-    <EditText
-        android:id="@+id/act_cost"
-        android:layout_width="152dp"
-        android:layout_height="44dp"
-        android:ems="10"
-        android:hint="Actual Cost"
-        android:inputType="textPersonName"
-        android:textColor="#605D5D"
-        app:layout_constraintEnd_toEndOf="@+id/strt_date"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/comp_time"
-        app:layout_constraintTop_toTopOf="@+id/comp_time" />
-
     <Button
         android:id="@+id/button"
         android:layout_width="192dp"
         android:layout_height="59dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginBottom="96dp"
         android:backgroundTint="#004c69"
         android:text="Create Proposal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/comp_time"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/proj_id"
+        app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
         android:id="@+id/imageView6"
