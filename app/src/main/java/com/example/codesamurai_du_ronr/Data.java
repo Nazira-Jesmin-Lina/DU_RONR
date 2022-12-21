@@ -2,21 +2,31 @@ package com.example.codesamurai_du_ronr;
 
 import android.content.Context;
 
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.example.codesamurai_du_ronr.OOP.Agencies;
 import com.example.codesamurai_du_ronr.OOP.Components;
 import com.example.codesamurai_du_ronr.OOP.Constraints;
 import com.example.codesamurai_du_ronr.OOP.Cord;
 import com.example.codesamurai_du_ronr.OOP.Projects;
 import com.example.codesamurai_du_ronr.OOP.Proposals;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Locale;
 
 public class Data {
 
+    ArrayList<Proposals> proposals;
 
     public ArrayList<Cord> read_project(Context context){
         ArrayList<Cord> cords=new ArrayList<>();
@@ -693,8 +703,39 @@ public class Data {
         return ret;
     }
 
+    public void get_prop_from_firebase(){
+        proposals=new ArrayList<>();
 
+        FirebaseDatabase.getInstance().getReference().child("data").child("Proposals").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for (DataSnapshot dataSnapshot: snapshot.getChildren())
+                {
+                    Proposals props=dataSnapshot.getValue(Proposals.class);
 
+                    proposals.add(props);
 
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+    }
+
+    ArrayList<Project_name> search(String name) {
+        ArrayList<Project_name> list = new ArrayList<>();
+        name=name.toLowerCase();
+        for (Proposals prop : proposals) {
+            if(prop.name.toLowerCase().contains(name)){
+                list.add(new Project_name(prop.name));
+            }
+        }
+        return list;
+
+    }
 
 }
