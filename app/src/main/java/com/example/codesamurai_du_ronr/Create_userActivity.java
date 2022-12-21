@@ -9,7 +9,7 @@ import android.widget.AutoCompleteTextView;
 public class Create_userActivity extends AppCompatActivity {
 
     private final String[] nameOfRoll = new String[]{
-            "System Admin","ECNEC","MOP","EXEC","APP"
+            "System Admin","MOP","EXEC","APP"
     };
     @Override
     protected void onCreate(Bundle savedInstanceState) {

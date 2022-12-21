@@ -24,6 +24,8 @@
                 android:layout_marginTop="12dp"
                 android:text="Project Name :"
                 android:textColor="#101010"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -35,6 +37,8 @@
                 android:layout_marginTop="4dp"
                 android:text="Location :"
                 android:textColor="#070707"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/pro_name" />
 
@@ -46,6 +50,8 @@
                 android:layout_marginTop="4dp"
                 android:text="Exec  :"
                 android:textColor="#0C0C0C"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/locationn" />
 
@@ -57,6 +63,8 @@
                 android:layout_marginTop="4dp"
                 android:text="Goal :"
                 android:textColor="#090909"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/execc" />
 
@@ -68,6 +76,8 @@
                 android:layout_marginTop="4dp"
                 android:text="Cost  :"
                 android:textColor="#0C0C0C"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/goall" />
 
@@ -79,6 +89,8 @@
                 android:layout_marginTop="4dp"
                 android:text="Timespan  :"
                 android:textColor="#090909"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/coxtt" />
 
@@ -90,6 +102,8 @@
                 android:layout_marginTop="4dp"
                 android:text="Project ID  :"
                 android:textColor="#0E0E0E"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/timesppan" />
 
@@ -101,6 +115,7 @@
                 android:layout_marginEnd="8dp"
                 android:text="TextView"
                 android:textColor="#0C0C0C"
+                android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/textView2"
@@ -112,6 +127,7 @@
                 android:layout_height="wrap_content"
                 android:text="TextView"
                 android:textColor="#0E0E0E"
+                android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/pro_name"
                 app:layout_constraintTop_toTopOf="@+id/textView3" />
@@ -122,6 +138,7 @@
                 android:layout_height="wrap_content"
                 android:text="TextView"
                 android:textColor="#0B0A0A"
+                android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/locationn"
                 app:layout_constraintTop_toTopOf="@+id/textView4" />
@@ -132,6 +149,7 @@
                 android:layout_height="wrap_content"
                 android:text="TextView"
                 android:textColor="#0B0A0A"
+                android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/execc"
                 app:layout_constraintTop_toTopOf="@+id/textView5" />
@@ -142,6 +160,7 @@
                 android:layout_height="wrap_content"
                 android:text="TextView"
                 android:textColor="#101010"
+                android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/goall"
                 app:layout_constraintTop_toTopOf="@+id/textView6" />
@@ -152,6 +171,7 @@
                 android:layout_height="wrap_content"
                 android:text="TextView"
                 android:textColor="#0B0B0B"
+                android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/coxtt"
                 app:layout_constraintTop_toTopOf="@+id/textView10" />
@@ -162,6 +182,7 @@
                 android:layout_height="wrap_content"
                 android:text="TextView"
                 android:textColor="#0C0C0C"
+                android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/coxtt"
                 app:layout_constraintTop_toTopOf="@+id/textView8" />
@@ -224,6 +245,8 @@
                 android:layout_height="wrap_content"
                 android:text="Start Date :"
                 android:textColor="#090909"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="@+id/textView8"
                 app:layout_constraintStart_toStartOf="@+id/textView8"
                 app:layout_constraintTop_toBottomOf="@+id/textView8" />
@@ -236,6 +259,8 @@
                 android:layout_marginTop="8dp"
                 android:text="Actual Cost :"
                 android:textColor="#101010"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="@+id/textView"
                 app:layout_constraintStart_toStartOf="@+id/textView"
                 app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -246,6 +271,7 @@
                 android:layout_height="wrap_content"
                 android:text="TextView"
                 android:textColor="#0C0C0C"
+                android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/projid"
                 app:layout_constraintTop_toTopOf="@+id/textView" />
@@ -257,6 +283,7 @@
                 android:layout_marginTop="8dp"
                 android:text="TextView"
                 android:textColor="#0E0E0E"
+                android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/startdate"

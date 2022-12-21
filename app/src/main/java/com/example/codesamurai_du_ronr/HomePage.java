@@ -1,5 +1,6 @@
 package com.example.codesamurai_du_ronr;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatImageButton;
@@ -18,8 +19,13 @@ import com.example.codesamurai_du_ronr.OOP.Components;
 import com.example.codesamurai_du_ronr.OOP.Constraints;
 import com.example.codesamurai_du_ronr.OOP.Projects;
 import com.example.codesamurai_du_ronr.OOP.Proposals;
+import com.example.codesamurai_du_ronr.OOP.User;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
@@ -31,7 +37,12 @@ public class HomePage extends AppCompatActivity {
     ConstraintLayout all_prop;
     ConstraintLayout approve_prop;
     ConstraintLayout create_user;
-    Button up;
+    ConstraintLayout up;
+    ConstraintLayout app;
+    ConstraintLayout exec;
+    ConstraintLayout mop;
+    ConstraintLayout sys_admin;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +57,52 @@ public class HomePage extends AppCompatActivity {
         approve_prop=findViewById(R.id.btn_approve_prop);
         create_user=findViewById(R.id.btn_create_user);
         up=findViewById(R.id.dbms);
+        app=findViewById(R.id.app);
+        exec=findViewById(R.id.exec);
+        mop=findViewById(R.id.mop);
+        sys_admin=findViewById(R.id.sys_admin);
+
+        FirebaseDatabase.getInstance().getReference().child("login").child("User").child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                        .addValueEventListener(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                User user=snapshot.getValue(User.class);
+                                System.out.println("naam h "+user.getRole());
+                                if(user.getRole().equals("APP"))
+                                {
+                                    exec.setVisibility(View.GONE);
+                                    mop.setVisibility(View.GONE);
+                                    sys_admin.setVisibility(View.GONE);
+                                }
+
+                                else if(user.getRole().equals("EXEC"))
+                                {
+                                    exec.setVisibility(View.VISIBLE);
+                                    mop.setVisibility(View.GONE);
+                                    sys_admin.setVisibility(View.GONE);
+                                }
+
+                                else if(user.getRole().equals("MOP"))
+                                {
+                                    exec.setVisibility(View.GONE);
+                                    mop.setVisibility(View.VISIBLE);
+                                    sys_admin.setVisibility(View.GONE);
+                                }
+
+                                else
+                                {
+                                    exec.setVisibility(View.VISIBLE);
+                                    mop.setVisibility(View.VISIBLE);
+                                    sys_admin.setVisibility(View.VISIBLE);
+                                }
+
+                            }
+
+                            @Override
+                            public void onCancelled(@NonNull DatabaseError error) {
+
+                            }
+                        });
 
         up.setOnClickListener(new View.OnClickListener() {
             @Override

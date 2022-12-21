@@ -34,26 +34,26 @@ public class Login extends AppCompatActivity {
             public void onClick(View view) {
                 String s_email = email.getText().toString();
                 String s_pass = password.getText().toString();
-                Intent intent=new Intent(Login.this,HomePage.class);
-                startActivity(intent);
-//                if (s_pass.isEmpty()) password.setError("Password field can't be empty.");
-//                else {
-//                    FirebaseAuth.getInstance().signInWithEmailAndPassword(s_email, s_pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-//                        @Override
-//                        public void onComplete(@NonNull Task<AuthResult> task) {
-//                                 if(task.isSuccessful())
-//                                 {
-//                                     Intent intent=new Intent(Login.this,HomePage.class);
-//                                     startActivity(intent);
-//                                 }
-//                                 else
-//                                 {
-//                                     Toast.makeText(getApplicationContext(),"Error occured",Toast.LENGTH_SHORT);
-//
-//                                 }
-//                        }
-//                    });
-//                }
+//                Intent intent=new Intent(Login.this,HomePage.class);
+//                startActivity(intent);
+                if (s_pass.isEmpty()) password.setError("Password field can't be empty.");
+                else {
+                    FirebaseAuth.getInstance().signInWithEmailAndPassword(s_email, s_pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                                 if(task.isSuccessful())
+                                 {
+                                     Intent intent=new Intent(Login.this,HomePage.class);
+                                     startActivity(intent);
+                                 }
+                                 else
+                                 {
+                                     Toast.makeText(getApplicationContext(),"Error occured",Toast.LENGTH_SHORT);
+
+                                 }
+                        }
+                    });
+                }
             }
         });
         signup.setOnClickListener(new View.OnClickListener() {
