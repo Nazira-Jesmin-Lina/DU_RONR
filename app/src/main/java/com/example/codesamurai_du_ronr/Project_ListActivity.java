@@ -43,7 +43,7 @@ public class Project_ListActivity extends AppCompatActivity {
 
         if(type.equals("project"))
         {
-            FirebaseDatabase.getInstance().getReference().child("Projects").addValueEventListener(new ValueEventListener() {
+            FirebaseDatabase.getInstance().getReference().child("data").child("Projects").addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
                     for (DataSnapshot dataSnapshot: snapshot.getChildren())
@@ -56,7 +56,7 @@ public class Project_ListActivity extends AppCompatActivity {
                         }
 
                     }
-                    adapter = new ProjectAdapter(getApplicationContext(),list);
+                    adapter = new ProjectAdapter(getApplicationContext(),list,type);
                     LinearLayoutManager llm = new LinearLayoutManager(getApplicationContext(),RecyclerView.VERTICAL,false);
                     recyclerView.setLayoutManager(llm);
                     recyclerView.setAdapter(adapter);
@@ -73,7 +73,7 @@ public class Project_ListActivity extends AppCompatActivity {
         }
         else
         {
-            FirebaseDatabase.getInstance().getReference().child("Proposals").addValueEventListener(new ValueEventListener() {
+            FirebaseDatabase.getInstance().getReference().child("data").child("Proposals").addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
                     for (DataSnapshot dataSnapshot: snapshot.getChildren())
@@ -85,7 +85,7 @@ public class Project_ListActivity extends AppCompatActivity {
                         }
 
                     }
-                    adapter = new ProjectAdapter(getApplicationContext(),list);
+                    adapter = new ProjectAdapter(getApplicationContext(),list,type);
                     LinearLayoutManager llm = new LinearLayoutManager(getApplicationContext(),RecyclerView.VERTICAL,false);
                     recyclerView.setLayoutManager(llm);
                     recyclerView.setAdapter(adapter);

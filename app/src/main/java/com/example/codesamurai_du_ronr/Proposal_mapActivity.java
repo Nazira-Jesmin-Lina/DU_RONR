@@ -46,7 +46,7 @@ public class Proposal_mapActivity extends Fragment implements OnMapReadyCallback
         public void onMapReady(GoogleMap googleMap) {
             GoogleMap mMap = googleMap;
 
-            FirebaseDatabase.getInstance().getReference().child("Proposals").addValueEventListener(new ValueEventListener() {
+            FirebaseDatabase.getInstance().getReference().child("data").child("Proposals").addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
                     for(DataSnapshot dataSnapshot : snapshot.getChildren())

@@ -58,7 +58,7 @@ public class SignUp extends AppCompatActivity {
                                 user.setEmail(s_email);
                                 user.setRole("app");
 
-                                FirebaseDatabase.getInstance().getReference().child("User").child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                                FirebaseDatabase.getInstance().getReference().child("login").child("User").child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                                                 .setValue(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                                             @Override
                                             public void onSuccess(Void unused) {

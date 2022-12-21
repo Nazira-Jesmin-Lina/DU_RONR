@@ -18,10 +18,11 @@ import java.util.ArrayList;
 public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ViewHolder>{
     private Context context;
     private ArrayList<Project_name> list;
-    public ProjectAdapter(Context context, ArrayList<Project_name> list) {
+    private String type,id;
+    public ProjectAdapter(Context context, ArrayList<Project_name> list,String type) {
         this.context = context;
         this.list = list;
-        System.out.println(list.size()+"hello");
+        this.type=type;
     }
 
     @NonNull
@@ -39,6 +40,7 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ViewHold
             public void onClick(View view) {
                 Intent intent=new Intent(context,commentActivity.class);
                 intent.putExtra("name",list.get(position).getName());
+                intent.putExtra("type",type);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
                 context.startActivity(intent);
             }

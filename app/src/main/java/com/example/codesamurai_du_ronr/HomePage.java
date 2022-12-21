@@ -50,12 +50,12 @@ public class HomePage extends AppCompatActivity {
         up.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FirebaseDatabase.getInstance().getReference().setValue(null);
+                FirebaseDatabase.getInstance().getReference().child("data").setValue(null);
                 Data data=new Data();
                 ArrayList<Projects> pp=data.get_projects(getApplicationContext());
                 for(Projects tmp: pp)
                 {
-                    FirebaseDatabase.getInstance().getReference().child("Projects").child(tmp.getProject_id()).setValue(tmp).addOnSuccessListener(new OnSuccessListener<Void>() {
+                    FirebaseDatabase.getInstance().getReference().child("data").child("Projects").child(tmp.getProject_id()).setValue(tmp).addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
                         public void onSuccess(Void unused) {
 
@@ -67,7 +67,7 @@ public class HomePage extends AppCompatActivity {
                 {
                     for(Proposals tmp: p1)
                     {
-                        FirebaseDatabase.getInstance().getReference().child("Proposals").child(tmp.getProject_id()).setValue(tmp).addOnSuccessListener(new OnSuccessListener<Void>() {
+                        FirebaseDatabase.getInstance().getReference().child("data").child("Proposals").child(tmp.getProject_id()).setValue(tmp).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void unused) {
 
@@ -82,7 +82,7 @@ public class HomePage extends AppCompatActivity {
                 {
                     for(Agencies tmp: p2)
                     {
-                        FirebaseDatabase.getInstance().getReference().child("Agencies").child(tmp.code).setValue(tmp).addOnSuccessListener(new OnSuccessListener<Void>() {
+                        FirebaseDatabase.getInstance().getReference().child("data").child("Agencies").child(tmp.code).setValue(tmp).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void unused) {
 
@@ -97,7 +97,7 @@ public class HomePage extends AppCompatActivity {
                 {
                     for(Constraints tmp: p3)
                     {
-                        FirebaseDatabase.getInstance().getReference().child("Constraints").child(tmp.getCode()+tmp.getConstraint_type()).setValue(tmp).addOnSuccessListener(new OnSuccessListener<Void>() {
+                        FirebaseDatabase.getInstance().getReference().child("data").child("Constraints").child(tmp.getCode()+tmp.getConstraint_type()).setValue(tmp).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void unused) {
 
@@ -112,7 +112,7 @@ public class HomePage extends AppCompatActivity {
                 {
                     for(Components tmp: p4)
                     {
-                        FirebaseDatabase.getInstance().getReference().child("Components").child(tmp.getComponent_id()).setValue(tmp).addOnSuccessListener(new OnSuccessListener<Void>() {
+                        FirebaseDatabase.getInstance().getReference().child("data").child("Components").child(tmp.getComponent_id()).setValue(tmp).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void unused) {
 

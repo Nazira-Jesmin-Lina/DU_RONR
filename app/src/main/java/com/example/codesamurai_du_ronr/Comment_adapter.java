@@ -16,9 +16,9 @@ import java.util.ArrayList;
 
 public class Comment_adapter extends RecyclerView.Adapter<Comment_adapter.viewHolder>  {
     Context context;
-    ArrayList<Comment_class> list;
+    ArrayList<Comment> list;
 
-    public Comment_adapter(Context context, ArrayList<Comment_class> list) {
+    public Comment_adapter(Context context, ArrayList<Comment> list) {
         this.context = context;
         this.list = list;
     }
@@ -32,10 +32,10 @@ public class Comment_adapter extends RecyclerView.Adapter<Comment_adapter.viewHo
 
     @Override
     public void onBindViewHolder(@NonNull viewHolder holder, int position) {
-        Comment_class comment=list.get(position);
+        Comment comment=list.get(position);
         String time= TimeAgo.using(comment.getCommentedAt());
-//        holder.binding.pname.setText(Html.fromHtml("<b>"+comment.getCommentText()+"</b >"));
-//        holder.binding.time.setText(time);
+        holder.binding.projectName.setText(Html.fromHtml("<b>"+comment.getCommentedby()+"</b >"+"    "+comment.getCommentText()));
+        holder.binding.time.setText(time);
         //comment.getCommentText();
 
     }

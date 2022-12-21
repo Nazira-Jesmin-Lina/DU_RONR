@@ -47,7 +47,7 @@ public class MapActivity extends Fragment implements OnMapReadyCallback,GoogleMa
         public void onMapReady(GoogleMap googleMap) {
             GoogleMap mMap = googleMap;
             //database
-            FirebaseDatabase.getInstance().getReference().child("Projects").addValueEventListener(new ValueEventListener() {
+            FirebaseDatabase.getInstance().getReference().child("data").child("Projects").addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
                     for(DataSnapshot dataSnapshot : snapshot.getChildren())
